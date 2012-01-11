@@ -1,0 +1,41 @@
+
+##
+
+ARCH_PREFIX=owa21x
+
+##
+
+################################################################################
+
+# Compiler options
+
+################################################################################
+
+# All the binaries must be fully qualified with the absolut path if they are not
+# in a directory added to the PATH.
+
+# Compilers.
+CC=arm-linux-gcc
+CXX=arm-linux-g++
+
+# Linker.
+LD=arm-linux-g++
+
+# Archiver
+AR=arm-linux-ar
+
+# Strip
+STRIP=arm-linux-strip
+
+# Flags passed to the compiler.
+CCFLAGS=-Os -DOWA2X -DOWA21X -fno-default-inline -nostdinc++ -DLINUX
+CXXFLAGS=-Os -DOWA2X -DOWA21X -fno-default-inline -nostdinc++ -DLINUX
+
+# Flags passed to the linker.
+LDFLAGS=-Os -lm -ldl -lpthread -lcrypt
+
+# Flags passed to the archiver
+ARFLAGS=ucvr
+
+# Flags passed to strip
+STRIPFLAGS=

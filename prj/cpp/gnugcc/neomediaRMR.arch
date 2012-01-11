@@ -1,0 +1,41 @@
+
+##
+
+ARCH_PREFIX=neomediaRMR
+
+##
+
+################################################################################
+
+# Compiler options
+
+################################################################################
+
+# All the binaries must be fully qualified with the absolut path if they are not
+# in a directory added to the PATH.
+
+# Compilers.
+CC=gcc
+CXX=g++
+
+# Linker.
+LD=g++
+
+# Archiver
+AR=ar
+
+# Strip
+STRIP=strip
+
+# Flags passed to the compiler.
+CCFLAGS=-g -DLINUX -DNEOMEDIARMR
+CXXFLAGS=-g -DLINUX -DNEOMEDIARMR
+
+# Flags passed to the linker.
+LDFLAGS=-L:/usr/lib/gcc/i486-linux-gnu/4.1.2 -lstdc++
+
+# Flags passed to the archiver
+ARFLAGS=ucvr
+
+# Flags passed to strip
+STRIPFLAGS=
